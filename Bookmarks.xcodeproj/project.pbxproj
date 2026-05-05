@@ -6,20 +6,85 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4AEDE80A2FAAA8AA00F45A4C /* BookmarksShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4AEDE8002FAAA8AA00F45A4C /* BookmarksShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4AEDE8082FAAA8AA00F45A4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4AEDE7CE2FAA926500F45A4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AEDE7FF2FAAA8AA00F45A4C;
+			remoteInfo = BookmarksShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4AEDE80B2FAAA8AA00F45A4C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4AEDE80A2FAAA8AA00F45A4C /* BookmarksShareExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4AEDE7D62FAA926500F45A4C /* Bookmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AEDE8002FAAA8AA00F45A4C /* BookmarksShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BookmarksShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4AEDE80E2FAAA8AA00F45A4C /* Exceptions for "BookmarksShareExtension" folder in "BookmarksShareExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4AEDE7FF2FAAA8AA00F45A4C /* BookmarksShareExtension */;
+		};
+		4AEDE8132FAAA9B200F45A4C /* Exceptions for "Bookmarks" folder in "BookmarksShareExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Shared/BookmarkAPIClient.swift,
+				Shared/SettingsStore.swift,
+			);
+			target = 4AEDE7FF2FAAA8AA00F45A4C /* BookmarksShareExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4AEDE7D82FAA926500F45A4C /* Bookmarks */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4AEDE8132FAAA9B200F45A4C /* Exceptions for "Bookmarks" folder in "BookmarksShareExtension" target */,
+			);
 			path = Bookmarks;
+			sourceTree = "<group>";
+		};
+		4AEDE8012FAAA8AA00F45A4C /* BookmarksShareExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4AEDE80E2FAAA8AA00F45A4C /* Exceptions for "BookmarksShareExtension" folder in "BookmarksShareExtension" target */,
+			);
+			path = BookmarksShareExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4AEDE7D32FAA926500F45A4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AEDE7FD2FAAA8AA00F45A4C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				4AEDE7D82FAA926500F45A4C /* Bookmarks */,
+				4AEDE8012FAAA8AA00F45A4C /* BookmarksShareExtension */,
 				4AEDE7D72FAA926500F45A4C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				4AEDE7D62FAA926500F45A4C /* Bookmarks.app */,
+				4AEDE8002FAAA8AA00F45A4C /* BookmarksShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,10 +122,12 @@
 				4AEDE7D22FAA926500F45A4C /* Sources */,
 				4AEDE7D32FAA926500F45A4C /* Frameworks */,
 				4AEDE7D42FAA926500F45A4C /* Resources */,
+				4AEDE80B2FAAA8AA00F45A4C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4AEDE8092FAAA8AA00F45A4C /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				4AEDE7D82FAA926500F45A4C /* Bookmarks */,
@@ -69,6 +138,28 @@
 			productName = Bookmarks;
 			productReference = 4AEDE7D62FAA926500F45A4C /* Bookmarks.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4AEDE7FF2FAAA8AA00F45A4C /* BookmarksShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AEDE80F2FAAA8AA00F45A4C /* Build configuration list for PBXNativeTarget "BookmarksShareExtension" */;
+			buildPhases = (
+				4AEDE7FC2FAAA8AA00F45A4C /* Sources */,
+				4AEDE7FD2FAAA8AA00F45A4C /* Frameworks */,
+				4AEDE7FE2FAAA8AA00F45A4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4AEDE8012FAAA8AA00F45A4C /* BookmarksShareExtension */,
+			);
+			name = BookmarksShareExtension;
+			packageProductDependencies = (
+			);
+			productName = BookmarksShareExtension;
+			productReference = 4AEDE8002FAAA8AA00F45A4C /* BookmarksShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +172,9 @@
 				LastUpgradeCheck = 2640;
 				TargetAttributes = {
 					4AEDE7D52FAA926500F45A4C = {
+						CreatedOnToolsVersion = 26.4;
+					};
+					4AEDE7FF2FAAA8AA00F45A4C = {
 						CreatedOnToolsVersion = 26.4;
 					};
 				};
@@ -100,12 +194,20 @@
 			projectRoot = "";
 			targets = (
 				4AEDE7D52FAA926500F45A4C /* Bookmarks */,
+				4AEDE7FF2FAAA8AA00F45A4C /* BookmarksShareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4AEDE7D42FAA926500F45A4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AEDE7FE2FAAA8AA00F45A4C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +224,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4AEDE7FC2FAAA8AA00F45A4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4AEDE8092FAAA8AA00F45A4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AEDE7FF2FAAA8AA00F45A4C /* BookmarksShareExtension */;
+			targetProxy = 4AEDE8082FAAA8AA00F45A4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4AEDE7E12FAA926700F45A4C /* Debug */ = {
@@ -251,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Bookmarks/Bookmarks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5V75MMLL3R;
@@ -283,6 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Bookmarks/Bookmarks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5V75MMLL3R;
@@ -310,6 +429,64 @@
 			};
 			name = Release;
 		};
+		4AEDE80C2FAAA8AA00F45A4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BookmarksShareExtension/BookmarksShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5V75MMLL3R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookmarksShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BookmarksShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.philstephens.Bookmarks.BookmarksShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4AEDE80D2FAAA8AA00F45A4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BookmarksShareExtension/BookmarksShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5V75MMLL3R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BookmarksShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BookmarksShareExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.philstephens.Bookmarks.BookmarksShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +504,15 @@
 			buildConfigurations = (
 				4AEDE7E42FAA926700F45A4C /* Debug */,
 				4AEDE7E52FAA926700F45A4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AEDE80F2FAAA8AA00F45A4C /* Build configuration list for PBXNativeTarget "BookmarksShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AEDE80C2FAAA8AA00F45A4C /* Debug */,
+				4AEDE80D2FAAA8AA00F45A4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
